@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "富山移住マッチング診断",
   description:
     "エンタメ感覚で10問に答えるだけ。自然・海鮮・子育て・住環境など、富山移住の魅力を楽しく発見できる診断です。",
-  metadataBase: new URL("https://toyama-matching.vercel.app"),
+  metadataBase: new URL("https://toyama-one.vercel.app"),
   openGraph: {
     title: "富山移住マッチング診断",
     description:
