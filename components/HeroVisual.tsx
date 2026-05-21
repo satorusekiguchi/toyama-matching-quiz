@@ -6,8 +6,8 @@ export function HeroVisual() {
     <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
       <div className="relative aspect-[4/3] w-full">
         <Image
-          src="/toyama-hero.svg"
-          alt="立山連峰と海辺の街並みをイメージしたビジュアル"
+          src="/toyama-hero-photo.png"
+          alt="立山連峰と富山市街の実写風景"
           fill
           priority
           className="object-cover"
