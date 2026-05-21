@@ -44,6 +44,52 @@ export async function GET(
             "Noto Sans JP, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, sans-serif",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: "220px",
+            background: "#DBEAFE",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: "140px",
+            bottom: "150px",
+            width: "290px",
+            height: "140px",
+            background: "#6EE7B7",
+            borderTopLeftRadius: "160px",
+            borderTopRightRadius: "160px",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: "320px",
+            bottom: "130px",
+            width: "380px",
+            height: "190px",
+            background: "#34D399",
+            borderTopLeftRadius: "220px",
+            borderTopRightRadius: "220px",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            right: "180px",
+            bottom: "160px",
+            width: "300px",
+            height: "140px",
+            background: "#7DD3FC",
+            borderTopLeftRadius: "180px",
+            borderTopRightRadius: "180px",
+          }}
+        />
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
           <p
             style={{
@@ -53,11 +99,22 @@ export async function GET(
               letterSpacing: "0.16em",
               color: "#0284c7",
               textTransform: "uppercase",
+              position: "relative",
+              zIndex: 2,
             }}
           >
             Toyama Migration Quiz
           </p>
-          <p style={{ margin: 0, fontSize: 32, fontWeight: 600, color: "#52525b" }}>
+          <p
+            style={{
+              margin: 0,
+              fontSize: 32,
+              fontWeight: 600,
+              color: "#52525b",
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
             富山との相性
           </p>
           <p
@@ -68,11 +125,22 @@ export async function GET(
               letterSpacing: "-0.04em",
               color: "#0284c7",
               lineHeight: 1,
+              position: "relative",
+              zIndex: 2,
             }}
           >
             {result.compatibility}
           </p>
-          <p style={{ margin: 0, fontSize: 44, fontWeight: 700, color: "#18181b" }}>
+          <p
+            style={{
+              margin: 0,
+              fontSize: 44,
+              fontWeight: 700,
+              color: "#18181b",
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
             {result.title}
           </p>
         </div>
@@ -87,6 +155,8 @@ export async function GET(
             fontSize: 26,
             fontWeight: 600,
             color: "#52525b",
+            position: "relative",
+            zIndex: 2,
           }}
         >
           #富山移住マッチング診断

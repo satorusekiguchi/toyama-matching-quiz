@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import { PageShell } from "@/components/PageShell";
 import { QuizCard } from "@/components/QuizCard";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -61,10 +62,14 @@ export default function QuizPage() {
 
   return (
     <PageShell>
-      <main className="flex min-h-dvh flex-col gap-6 px-5 py-10 md:py-14">
-        <header className="text-center">
-          <p className="text-xs font-bold tracking-[0.2em] text-sky-600 uppercase">
+      <main className="mx-auto flex min-h-dvh w-full max-w-3xl flex-col gap-6 px-5 py-10 md:py-14">
+        <header className="space-y-2 text-center">
+          <p className="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1 text-xs font-bold tracking-[0.16em] text-sky-700 uppercase ring-1 ring-sky-100">
+            <CategoryIcon icon="compass" className="size-3.5" />
             富山移住マッチング診断
+          </p>
+          <p className="text-xs text-zinc-500">
+            回答の選択肢は毎回ランダム表示されます
           </p>
         </header>
 

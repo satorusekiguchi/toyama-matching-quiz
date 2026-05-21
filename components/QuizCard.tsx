@@ -1,8 +1,10 @@
 "use client";
 
+import { CategoryIcon } from "@/components/CategoryIcon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { type AnswerOption, type QuizChoice } from "@/lib/questions";
+import { CATEGORY_VISUALS } from "@/lib/visuals";
 
 type QuizCardProps = {
   category: string;
@@ -24,12 +26,18 @@ export function QuizCard({
   onSelect,
 }: QuizCardProps) {
   const progressValue = ((questionIndex + 1) / totalQuestions) * 100;
+  const visual = CATEGORY_VISUALS[category];
 
   return (
     <Card className="w-full border-zinc-200 bg-white shadow-sm">
       <CardHeader className="space-y-4">
         <div className="flex items-center justify-between gap-3">
-          <span className="inline-flex rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700 ring-1 ring-sky-100">
+          <span
+            className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ring-1 ${
+              visual?.badgeClassName ?? "bg-sky-50 text-sky-700 ring-sky-100"
+            }`}
+          >
+            {visual ? <CategoryIcon icon={visual.icon} className="size-3.5" /> : null}
             {category}
           </span>
           <p className="text-xs font-medium text-zinc-500">
@@ -37,6 +45,7 @@ export function QuizCard({
           </p>
         </div>
         <Progress value={progressValue} className="h-1.5" />
+        {visual ? <p className="text-xs text-zinc-500">{visual.hint}</p> : null}
         <CardTitle className="text-lg leading-relaxed font-bold text-zinc-900 md:text-xl">
           {title}
         </CardTitle>
@@ -63,7 +72,7 @@ export function QuizCard({
               >
                 {index + 1}
               </span>
-              <span className="text-sm leading-relaxed text-zinc-800 md:text-base">
+              <span className="text-sm leading-relaxed font-medium text-zinc-800 md:text-base">
                 {choice.text}
               </span>
             </button>
